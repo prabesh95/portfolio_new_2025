@@ -99,14 +99,7 @@ export function ProjectsSection() {
                   >
                     <ExternalLink size={16} />
                   </a>
-                  <a
-                    href={project.links.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2 bg-background/80 backdrop-blur-sm rounded-lg text-foreground hover:text-primary transition-colors"
-                  >
-                    <Github size={16} />
-                  </a>
+                 
                 </div>
               </div>
 
