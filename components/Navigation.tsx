@@ -40,7 +40,7 @@ export function Navigation() {
             className="text-xl font-bold gradient-text"
             whileHover={{ scale: 1.05 }}
           >
-            Alex Johnson
+            Prabesh Dahal
           </motion.div>
 
           {/* Desktop Navigation */}

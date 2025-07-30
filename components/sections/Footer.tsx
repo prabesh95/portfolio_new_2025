@@ -1,14 +1,13 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 export function Footer() {
   const socialLinks = [
-    { icon: Github, href: '#', label: 'GitHub' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Mail, href: '#contact', label: 'Email' },
+    { icon: Github, href: 'https://github.com/prabesh95', label: 'GitHub' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/prabesh-dahal-90172127b/', label: 'LinkedIn' },
+    { icon: Mail, href: 'mailto:midas.prabesh@gmail.com', label: 'Email' },
   ];
 
   const quickLinks = [
@@ -31,7 +30,7 @@ export function Footer() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="text-2xl font-bold gradient-text">Alex Johnson</div>
+            <div className="text-2xl font-bold gradient-text">Prabesh Dahal</div>
             <p className="text-muted-foreground leading-relaxed">
               Full-Stack Developer & Designer passionate about creating 
               exceptional digital experiences.
@@ -85,11 +84,11 @@ export function Footer() {
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-lg font-semibold">Let's Connect</h3>
+            <h3 className="text-lg font-semibold">Let&apos;s Connect</h3>
             <div className="space-y-2 text-muted-foreground">
-              <p>San Francisco, CA</p>
-              <p>alex@example.com</p>
-              <p>+1 (555) 123-4567</p>
+              <p>Kathmandu, Nepal</p>
+              <p>midas.prabesh@gmail.com</p>
+              <p>+977 9849780539</p>
             </div>
             <div className="pt-4">
               <p className="text-sm text-muted-foreground">
@@ -106,7 +105,7 @@ export function Footer() {
           transition={{ duration: 0.6, delay: 0.6 }}
           viewport={{ once: true }}
         >
-          <p>&copy; 2024 Alex Johnson. All rights reserved.</p>
+          <p>&copy; 2024 Prabesh Dahal. All rights reserved.</p>
         </motion.div>
       </div>
     </footer>

@@ -6,36 +6,39 @@ import { Briefcase, Calendar } from 'lucide-react';
 export function ExperienceSection() {
   const experiences = [
     {
-      company: 'TechCorp Solutions',
-      role: 'Senior Full-Stack Developer',
-      period: '2022 - Present',
-      description: 'Leading development of enterprise-grade applications, mentoring junior developers, and architecting scalable solutions.',
+      company: 'Kinnmel Tech',
+      role: 'Lead Full-Stack Developer',
+      period: '2023 - Present',
+      description:
+        'Driving full-stack development of a scalable Vite + React + TypeScript frontend with an Express & MySQL backend. Implementing advanced features like multi-tenant architecture and robust API design.',
       achievements: [
-        'Reduced application load time by 40%',
-        'Led team of 6 developers',
-        'Implemented CI/CD pipelines',
+        'Architected multi-domain tenancy system improving scalability by 30%',
+        'Led migration to TypeScript and integrated Radix UI for accessible components',
+        'Streamlined backend workflows using Nodemailer and UUID for secure user management',
       ],
     },
     {
-      company: 'StartupXYZ',
-      role: 'Full-Stack Developer & Designer',
+      company: 'Nepal Ma Future Cha? Project',
+      role: 'Frontend & API Developer',
+      period: '2022 - 2023',
+      description:
+        'Built a dynamic, SEO-friendly Next.js frontend and collaborated on backend REST APIs. Created intuitive UI components with Tailwind CSS and ShadCN UI, enhancing user experience for thousands of visitors.',
+      achievements: [
+        'Implemented reusable UI components increasing frontend dev speed by 40%',
+        'Optimized API response times, reducing latency by 25%',
+        'Contributed to event landing pages with high user engagement metrics',
+      ],
+    },
+    {
+      company: 'Freelance & Open Source',
+      role: 'Full-Stack Developer',
       period: '2020 - 2022',
-      description: 'Developed the core platform from scratch, designed user interfaces, and established development workflows.',
+      description:
+        'Delivered multiple client projects involving React, Node.js, and MySQL. Built responsive websites, RESTful APIs, and contributed to open source UI libraries.',
       achievements: [
-        'Built MVP in 3 months',
-        'Designed complete design system',
-        'Achieved 99.9% uptime',
-      ],
-    },
-    {
-      company: 'Digital Agency Pro',
-      role: 'Frontend Developer',
-      period: '2019 - 2020',
-      description: 'Created responsive websites and web applications for various clients across different industries.',
-      achievements: [
-        'Delivered 25+ client projects',
-        'Improved mobile performance by 60%',
-        'Client satisfaction rate: 98%',
+        'Successfully completed 15+ projects with 5-star client ratings',
+        'Improved client website performance with optimized React builds',
+        'Enhanced application security using JWT and OAuth workflows',
       ],
     },
   ];
@@ -54,8 +57,8 @@ export function ExperienceSection() {
             Professional <span className="gradient-text">Experience</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A journey of continuous growth, innovation, and impactful contributions 
-            across diverse projects and teams.
+            A journey of continuous growth, innovation, and impactful contributions
+            to tech projects rooted in Nepal’s growing digital landscape.
           </p>
         </motion.div>
 
@@ -107,9 +110,9 @@ export function ExperienceSection() {
                             className="flex items-start gap-3 text-muted-foreground"
                             initial={{ opacity: 0, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ 
-                              duration: 0.4, 
-                              delay: index * 0.1 + achIndex * 0.1 + 0.3 
+                            transition={{
+                              duration: 0.4,
+                              delay: index * 0.1 + achIndex * 0.1 + 0.3,
                             }}
                             viewport={{ once: true }}
                           >

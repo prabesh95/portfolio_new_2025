@@ -1,27 +1,27 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { motion } from "framer-motion";
+import { Mail, Phone, MapPin, Send } from "lucide-react";
 
 export function ContactSection() {
   const contactInfo = [
     {
       icon: Mail,
-      label: 'Email',
-      value: 'alex@example.com',
-      href: 'mailto:alex@example.com',
+      label: "Email",
+      value: "midas.prabesh@gmail.com",
+      href: "mailto:midas.prabesh@gmail.com",
     },
     {
       icon: Phone,
-      label: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567',
+      label: "Phone",
+      value: "+977 9849780539",
+      href: "tel:9849780539",
     },
     {
       icon: MapPin,
-      label: 'Location',
-      value: 'San Francisco, CA',
-      href: '#',
+      label: "Location",
+      value: "Kathmandu, Nepal",
+      href: "#",
     },
   ];
 
@@ -36,11 +36,11 @@ export function ContactSection() {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            Let's Work <span className="gradient-text">Together</span>
+            Let&apos;s Work <span className="gradient-text">Together</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Ready to bring your next project to life? Get in touch and let's 
-            create something extraordinary together.
+            Ready to bring your next project to life? Get in touch and
+            let&apos;s create something extraordinary together.
           </p>
         </motion.div>
 
@@ -92,39 +92,78 @@ export function ContactSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <form className="space-y-6">
+            <form
+              action="https://formsubmit.co/midas.prabesh@gmail.com"
+              method="POST"
+              className="space-y-6"
+            >
+              {/* Name */}
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-medium mb-2">Name</label>
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium mb-2"
+                  >
+                    Name
+                  </label>
                   <input
+                    id="name"
+                    name="name"
                     type="text"
+                    required
                     className="w-full px-4 py-3 bg-card border border-border/50 rounded-lg focus:outline-none focus:border-primary/50 focus:ring-2 focus:ring-primary/20 transition-all duration-200"
                     placeholder="Your name"
                   />
                 </div>
+                {/* Email */}
                 <div>
-                  <label className="block text-sm font-medium mb-2">Email</label>
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium mb-2"
+                  >
+                    Email
+                  </label>
                   <input
+                    id="email"
+                    name="email"
                     type="email"
+                    required
                     className="w-full px-4 py-3 bg-card border border-border/50 rounded-lg focus:outline-none focus:border-primary/50 focus:ring-2 focus:ring-primary/20 transition-all duration-200"
                     placeholder="your@email.com"
                   />
                 </div>
               </div>
 
+              {/* Subject */}
               <div>
-                <label className="block text-sm font-medium mb-2">Subject</label>
+                <label
+                  htmlFor="subject"
+                  className="block text-sm font-medium mb-2"
+                >
+                  Subject
+                </label>
                 <input
+                  id="subject"
+                  name="subject"
                   type="text"
                   className="w-full px-4 py-3 bg-card border border-border/50 rounded-lg focus:outline-none focus:border-primary/50 focus:ring-2 focus:ring-primary/20 transition-all duration-200"
                   placeholder="Project discussion"
                 />
               </div>
 
+              {/* Message */}
               <div>
-                <label className="block text-sm font-medium mb-2">Message</label>
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium mb-2"
+                >
+                  Message
+                </label>
                 <textarea
+                  id="message"
+                  name="message"
                   rows={6}
+                  required
                   className="w-full px-4 py-3 bg-card border border-border/50 rounded-lg focus:outline-none focus:border-primary/50 focus:ring-2 focus:ring-primary/20 transition-all duration-200 resize-none"
                   placeholder="Tell me about your project..."
                 ></textarea>

@@ -1,38 +1,52 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { ExternalLink, Github } from 'lucide-react';
+import { motion } from "framer-motion";
+import { ExternalLink, Github } from "lucide-react";
+import Image from "next/image";
 
 export function ProjectsSection() {
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'A modern e-commerce solution with AI-powered recommendations and seamless checkout experience.',
-      image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800',
-      tags: ['Next.js', 'Stripe', 'PostgreSQL', 'AI/ML'],
+      title: "Nepal Ma Future Cha? – Employer Insights Hub",
+      description:
+        "A Next.js + TailwindCSS frontend portal showcasing career sectors, company insights, and salary benchmarks for Nepali professionals.",
+      image:
+        "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80",
+      tags: ["Next.js", "TypeScript", "TailwindCSS", "Sanity CMS"],
       links: {
-        demo: '#',
-        github: '#',
+        demo: "https://www.hivelaya.com/futurecha",
+        // github: "#",
       },
     },
     {
-      title: 'SaaS Dashboard',
-      description: 'Comprehensive analytics dashboard with real-time data visualization and team collaboration features.',
-      image: 'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800',
-      tags: ['React', 'D3.js', 'Node.js', 'MongoDB'],
+      title: "Ntcs – Vite React ShadCN UI",
+      description:
+        "A modern React frontend built with Vite, ShadCN UI, Radix UI, React Query, and TypeScript for a scalable, performant web experience.",
+      image:
+        "https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&w=800&q=80",
+      tags: [
+        "React",
+        "Vite",
+        "TypeScript",
+        "ShadCN UI",
+        "Radix UI",
+        "React Query",
+      ],
       links: {
-        demo: '#',
-        github: '#',
+        demo: "https://ntcs.com.np/",
+        // github: "https://github.com/your-repo/kinnmel-frontend",
       },
     },
     {
-      title: 'Mobile Banking App',
-      description: 'Secure mobile banking application with biometric authentication and advanced financial insights.',
-      image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800',
-      tags: ['React Native', 'GraphQL', 'AWS', 'Security'],
+      title: "Kinnmel Backend API",
+      description:
+        "Express.js backend with MySQL integration, file uploads, CORS, and Nodemailer for email notifications powering the Kinnmel platform.",
+      image:
+        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80",
+      tags: ["Express", "MySQL", "Nodemailer", "REST API", "UUID"],
       links: {
-        demo: '#',
-        github: '#',
+        demo: "https://kinnmel.com/",
+        // github: "https://github.com/your-repo/kinnmel-backend",
       },
     },
   ];
@@ -51,8 +65,8 @@ export function ProjectsSection() {
             Featured <span className="gradient-text">Projects</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A showcase of my recent work, each project representing innovation, 
-            attention to detail, and exceptional user experience.
+            Selected projects demonstrating technology expertise, scalability,
+            and impact in the Nepal tech ecosystem.
           </p>
         </motion.div>
 
@@ -68,21 +82,27 @@ export function ProjectsSection() {
               whileHover={{ y: -10 }}
             >
               <div className="relative overflow-hidden">
-                <img
+                <Image
                   src={project.image}
                   alt={project.title}
+                  width={400}
+                  height={200}
                   className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <a
                     href={project.links.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="p-2 bg-background/80 backdrop-blur-sm rounded-lg text-foreground hover:text-primary transition-colors"
                   >
                     <ExternalLink size={16} />
                   </a>
                   <a
                     href={project.links.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="p-2 bg-background/80 backdrop-blur-sm rounded-lg text-foreground hover:text-primary transition-colors"
                   >
                     <Github size={16} />
