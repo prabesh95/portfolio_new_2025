@@ -18,6 +18,10 @@ export const metadata: Metadata = {
     description: 'Premium portfolio showcasing exceptional digital experiences',
     type: 'website',
   },
+  icons: {
+    icon: './favicon.png', // or '/favicon.ico'
+  },
+  metadataBase: new URL('https://prabesh-dahal.com.np'),
 };
 
 export default function RootLayout({
